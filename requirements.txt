@@ -6,5 +6,5 @@ transformers
 pandas
 setuptools>=65
 nltk
-llvm>=0.43.0
+llvmlite>=0.43.0
 numba>=0.60.0
