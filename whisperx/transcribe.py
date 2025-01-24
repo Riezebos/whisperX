@@ -23,7 +23,7 @@ from .utils import (
 
 cudnn_path = Path(__file__).parents[1] / "/nvidia/cudnn/lib/"
 
-os.environ["LD_LIBRARY_PATH"] = cudnn_path
+os.environ["LD_LIBRARY_PATH"] = str(cudnn_path.resolve())
 print(os.environ["LD_LIBRARY_PATH"])
 
 
