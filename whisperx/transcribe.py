@@ -21,7 +21,7 @@ from .utils import (
     str2bool,
 )
 
-cudnn_path = Path(__file__).parents[1] / "/nvidia/cudnn/lib/"
+cudnn_path = Path(__file__).parents[1] / "nvidia/cudnn/lib/"
 
 os.environ["LD_LIBRARY_PATH"] = str(cudnn_path.resolve())
 print(os.environ["LD_LIBRARY_PATH"])
