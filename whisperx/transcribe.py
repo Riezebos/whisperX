@@ -1,3 +1,4 @@
+from pathlib import Path
 import argparse
 import gc
 import os
@@ -19,6 +20,11 @@ from .utils import (
     optional_int,
     str2bool,
 )
+
+cudnn_path = Path(__file__).parents[1] / "/nvidia/cudnn/lib/"
+
+os.environ["LD_LIBRARY_PATH"] = cudnn_path
+print(os.environ["LD_LIBRARY_PATH"])
 
 
 def cli():
